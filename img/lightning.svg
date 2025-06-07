@@ -1,0 +1,14 @@
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="384.000000pt" height="512.000000pt" 
+viewBox="0 0 384.000000 512.000000" preserveAspectRatio="xMidYMid meet" aria-labelledby="boltTitle boltDesc" role="img">
+    <title id="boltTitle">An image depicting a lightning bolt.</title>
+    <desc id="boltDesc">A jagged lightning bolt, thick at the top and sharp at the bottom.</desc>
+    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+        <path d="M515 5106 c-91 -29 -168 -96 -204 -177 -16 -36 -51 -291 -166 -1210
+        -90 -714 -144 -1180 -141 -1206 13 -98 86 -196 181 -243 l50 -25 763 -3 c716
+        -2 763 -4 758 -20 -3 -9 -112 -444 -242 -967 -259 -1044 -251 -996 -199 -1101
+        28 -57 64 -92 129 -127 34 -18 57 -22 136 -22 83 0 102 3 150 27 30 15 69 42
+        86 60 48 50 1963 2855 1993 2918 22 47 26 68 26 145 0 76 -5 99 -26 145 -39
+        81 -99 144 -177 182 l-67 33 -741 5 -742 5 236 625 c228 606 235 627 236 700
+        1 66 -3 82 -30 130 -33 60 -99 112 -162 130 -58 16 -1795 12 -1847 -4z"/>
+    </g>
+</svg>
