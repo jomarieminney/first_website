@@ -111,11 +111,20 @@ just a BIT less ugly! */
  .button {
      border-radius: 4px;
      background-color: #ffa300;
+    /* I can combine root variables with combo rules!
+    Here I'm setting top/bottom to small, and left/right
+    to the medium space setting. */
      padding: var(--space-small) var(--space-medium);
      text-decoration: none;
      color: black;
      border:none;
      box-shadow: 0 0 var(--space-medium) rgba(0,0,0,0.1);
+     transition: all 0.2s ease-in-out; 
+ }
+
+ .button:hover{
+    box-shadow: 0 0 var(--space-medium) rgba(0,0,0,0.3), 
+                0 0 var(--space-large) rgba(0,0,0,0.1) ;
  }
 
  /* ---End Component Classes--- */
@@ -125,15 +134,30 @@ just a BIT less ugly! */
     display:flex;
     align-items:center;
     justify-content:space-between;
-    /* I can combine root variables with combo rules!
-    Here I'm setting top/bottom to small, and left/right
-    to the medium space setting. */
-    padding: var(--space-small) var(--space-medium);
+    padding: var(--space-small) var(--space-medium) 0;
  }
 
  .logo {
      max-height: 100px;
      width: auto;
+ }
+
+ /* Default for mobile - we'll add a media query
+ to change the direction to 'row' on bigger screens */
+ header nav ul{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+ }
+
+ nav a{
+    text-decoration:none;
+    color: var(--black);
+ }
+
+ /* This is how we change the style on hover! */
+  nav a:hover{
+    color: var(--brand);
  }
 
  /* Add a margin around the outside of everything 
@@ -165,7 +189,14 @@ just a BIT less ugly! */
         margin-top: var(--space-small);
      }
 }
- 
+ h1{
+    font-size: 2em;
+    text-wrap:balance;
+ }
+
+ h1 span{
+    color:var(--action);
+ }
  /* Styles for 3 boxes section */
  .article-container {  /* This is the invisible section around the articles */
     display:flex;
@@ -226,3 +257,38 @@ just a BIT less ugly! */
     padding:var(--space-small);
     margin-top:var(--space-small);
  }
+
+ /* Responsive media queries - 
+ these allow us to add different styles at different sizes */
+@media only screen and (min-width: 768px) {
+    header nav ul{
+        flex-direction:row;
+        gap:var(--space-large);
+        font-size:1.2em;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+
+    .contact{
+        padding:var(--space-large);
+        gap:var(--space-medium);
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .hero{
+        padding:var(--space-xl);
+    }
+
+    h1{
+        font-size:3em;
+    }
+
+     .article-container {
+        flex-direction:row;
+     }
+
+     .contact form{
+        max-width:50%;
+     }
+}
