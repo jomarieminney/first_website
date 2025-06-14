@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* Root variables are used so that we can have a single place
 in our code to declare things like colours and fonts, as well as
 values we reuse a lot (like our spacing scale). */
