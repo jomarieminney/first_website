@@ -1,3 +1,6 @@
+/* Root variables are used so that we can have a single place
+in our code to declare things like colours and fonts, as well as
+values we reuse a lot (like our spacing scale). */
 :root {
     --brand: #8246af;
     --action: #ffa300;
@@ -6,14 +9,17 @@
     --base-dark: #0d0711;
     --black: #111111;
     --font-default: "Inter", sans-serif;
-    --font-feature:
+    --font-feature: "Rubik", sans-serif;
     --space-small: 8px;
     --space-medium: 16px;
     --space-large: 32px;
     --space-xl: 64px;
 }
 
-/* CSS Reset */
+/* CSS Reset  (Base Styles)
+These are the styles we are applying to make sure that
+browsers don't do silly or unexpected things, and our defaults are
+just a BIT less ugly! */
 
  html {
      box-sizing: border-box;
@@ -35,7 +41,7 @@
  h4,
  h5,
  h6 {
-     font-family: "Rubik", sans-serif;
+     font-family: var(--font-feature);
  }
 
  body,
@@ -69,21 +75,17 @@
      font: inherit;
  }
 
- /* Utility Classes */
+ /* ---End CSS Reset --- */
+
+ /* Utility Classes - 
+ reusable styles for styles you add 
+ all the time to lots of different elements */
  .flex {
      display: flex;
  }
 
- .space-between {
-     justify-content: space-between;
- }
-
- .column {
-     flex-direction: column;
- }
-
  .padding-small {
-     padding: 8px;
+     padding: var(--space-small);
  }
 
  .padding-medium {
@@ -95,12 +97,13 @@
  }
 
  .padding-xl {
-     padding: 64px;
+     padding: var(--space-xl);
  }
 
- /* End Utility Classes */
+ /* ---End Utility Classes--- */
 
- /* Component Classes */
+ /* Component Classes - reusable styles for specific elements */
+
  .icon {
      width: var(--space-large);
  }
@@ -108,13 +111,33 @@
  .button {
      border-radius: 4px;
      background-color: #ffa300;
-     padding: 8px var(--space-medium);
+     padding: var(--space-small) var(--space-medium);
      text-decoration: none;
      color: black;
+     border:none;
+     box-shadow: 0 0 var(--space-medium) rgba(0,0,0,0.1);
  }
 
- /* End Component Classes */
+ /* ---End Component Classes--- */
 
+ /* Page Styles */
+ header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /* I can combine root variables with combo rules!
+    Here I'm setting top/bottom to small, and left/right
+    to the medium space setting. */
+    padding: var(--space-small) var(--space-medium);
+ }
+
+ .logo {
+     max-height: 100px;
+     width: auto;
+ }
+
+ /* Add a margin around the outside of everything 
+ and gaps in between our sections. */
  main {
      display: flex;
      flex-direction: column;
@@ -123,38 +146,42 @@
      padding:var(--space-medium);
  }
 
- /* Header Styles */
- header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
- }
- .logo {
-     max-height: 100px;
-     width: auto;
- }
-
- /* Hero Styles */
+ /* Styles for hero section */
  .hero {
      background-color: var(--brand);
-     color: white;
+     color: var(--white);
      display: flex;
      flex-direction: column;
      align-items: flex-start;
-     border-radius: 8px;
- }
-
- .article-container {
-     gap: var(--space-medium);
+     border-radius: var(--space-small);
+     padding:var(--space-large);
+     gap:var(--space-medium);
+    /* This is an example of a NESTED CSS selector. 
+    It's a different way of targeting children, by putting
+    the child inside the brackets for the parent rule.
+    This achieves the same result as adding a rule directly
+    for .hero .button {} */
+     .button{
+        margin-top: var(--space-small);
+     }
+}
+ 
+ /* Styles for 3 boxes section */
+ .article-container {  /* This is the invisible section around the articles */
+    display:flex;
+    /*We want the default to be column, then use a media query for larger screens*/
+    flex-direction: column;
+    gap: var(--space-medium);
  }
 
  article {
-     background-color: #cdb5df;
-     border-radius: 8px;
+     background-color: var(--base-light);
+     border-radius: var(--space-medium);
      display:flex;
-     flex-direction:column;
+     flex-direction:column; 
      align-items:flex-start;
-     gap:8px;
+     gap:var(--space-small);
+
  }
 
  article .icon {
@@ -176,5 +203,26 @@
     display:flex;
     flex-direction:column;
     gap:8px;
-    min-width:50%;
+    width:100%;
+ }
+
+ footer{
+    margin-top: var(--space-medium);
+ }
+ /* Note that here we are making the ul the flex container,
+ not the nav. This is because the items are the <li> elements,
+ and the parent of those elements is ul. This selector means
+ "ul elements that are inside nav elements that are inside footer elements"  */
+ footer nav ul{
+    display:flex;
+    justify-content:center;
+    gap:var(--space-medium);
+ }
+
+ .copyright-bar{
+    background-color:var(--brand);
+    color:var(--white);
+    text-align:center;
+    padding:var(--space-small);
+    margin-top:var(--space-small);
  }
