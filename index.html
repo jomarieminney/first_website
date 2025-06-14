@@ -7,49 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>She Codes with a space</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- this is a comment -->
 </head>
 
 <body>
-    <header>
-        <img src="img/logo.png" alt="She Codes Plus logo">
+    <header class="flex padding-medium">
+        <img src="img/logo.png" alt="She Codes Plus logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#">Coders</a></li>
                 <li><a href="#">Mentors</a></li>
                 <li><a href="#">Partners</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="hero rounded-lg padding-xl">
             <h1>A <span>movement</span> devoted to helping women learn tech skills.</h1>
-            <a href="#">Start Learning</a>
+            <a href="#" class="button">Start Learning</a>
         </section>
-        <section>
-            <article>
-                <img src="img/tools.svg" alt="tools icon">
+        <section class="flex article-container">
+            <article class="padding-large">
+                <img src="img/tools.svg" alt="tools icon" class="icon">
                 <h2>1 Day Workshops</h2>
                 <p>Whether you're interested in coding as a career, or just looking to see what it's all about, our free one day workshops are the perfect starting point.</p>
-                <a href="#">Apply</a>
+                <a href="#" class="button">Apply</a>
             </article>
-            <article>
-                <img src="img/lightning.svg" alt="lightning bolt icon">
+            <article class="padding-large">
+                <img src="img/lightning.svg" alt="lightning bolt icon" class="icon">
                 <h2>1 Week Flash</h2>
                 <p>Discover the fundamentals of tech in just one week. Flash is a one week taster program, aimed at teaching you the basics of the key emerging fields in tech.</p>
-                <a href="#">Apply</a>
+                <a href="#" class="button">Apply</a>
             </article>
-            <article>
-                <img src="img/plus.svg" alt="plus icon">
+            <article class="padding-large">
+                <img src="img/plus.svg" alt="plus icon" class="icon">
                 <h2>6 Month Plus</h2>
                 <p>She Codes Plus is a program providing an alternate pathway within tech. The Plus program is perfect for you if your desire is to enter a tech career.</p>
-                <a href="#">Apply</a>
+                <a href="#" class="button">Apply</a>
             </article>
         </section>
 
-        <section>
+        <section class="contact" id="contact">
             <h2>Get in Touch</h2>
             <form>
                 <label for="your-name">Your Name</label>
@@ -70,9 +72,13 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="#"><img src="img/instagram.svg" alt="Instagram"></a></li>
-                <li><a href="#"><img src="img/slack.svg" alt="Instagram"></a></li>
-                <li><a href="#"><img src="img/github.svg" alt="Instagram"></a></li>
+                <li>
+                    <a href="#">
+                        <img src="img/instagram.svg" alt="Instagram" class="icon">
+                    </a>
+                </li>
+                <li><a href="#"><img src="img/slack.svg" alt="Instagram" class="icon"></a></li>
+                <li><a href="#"><img src="img/github.svg" alt="Github" class="icon"></a></li>
             </ul>
         </nav>
         <div><p>&copy; Jo Minney, cat lover</p></div>

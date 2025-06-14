@@ -1,0 +1,180 @@
+:root {
+    --brand: #8246af;
+    --action: #ffa300;
+    --white: #ffffff;
+    --base-light: #cdb5df;
+    --base-dark: #0d0711;
+    --black: #111111;
+    --font-default: "Inter", sans-serif;
+    --font-feature:
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-large: 32px;
+    --space-xl: 64px;
+}
+
+/* CSS Reset */
+
+ html {
+     box-sizing: border-box;
+     font-size: var(--space-medium);
+     font-family: var(--font-default);
+     color: var(--black);
+     scroll-behavior: smooth;
+ }
+
+ *,
+ *:before,
+ *:after {
+     box-sizing: inherit;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     font-family: "Rubik", sans-serif;
+ }
+
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ ol,
+ ul {
+     margin: 0;
+     padding: 0;
+ }
+
+ ol,
+ ul {
+     list-style: none;
+ }
+
+ img {
+     max-width: 100%;
+     height: auto;
+ }
+
+ input,
+ button,
+ textarea,
+ select {
+     font: inherit;
+ }
+
+ /* Utility Classes */
+ .flex {
+     display: flex;
+ }
+
+ .space-between {
+     justify-content: space-between;
+ }
+
+ .column {
+     flex-direction: column;
+ }
+
+ .padding-small {
+     padding: 8px;
+ }
+
+ .padding-medium {
+     padding: var(--space-medium);
+ }
+
+ .padding-large {
+     padding: var(--space-large);
+ }
+
+ .padding-xl {
+     padding: 64px;
+ }
+
+ /* End Utility Classes */
+
+ /* Component Classes */
+ .icon {
+     width: var(--space-large);
+ }
+
+ .button {
+     border-radius: 4px;
+     background-color: #ffa300;
+     padding: 8px var(--space-medium);
+     text-decoration: none;
+     color: black;
+ }
+
+ /* End Component Classes */
+
+ main {
+     display: flex;
+     flex-direction: column;
+     gap: var(--space-medium);
+     justify-content: center;
+     padding:var(--space-medium);
+ }
+
+ /* Header Styles */
+ header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+ }
+ .logo {
+     max-height: 100px;
+     width: auto;
+ }
+
+ /* Hero Styles */
+ .hero {
+     background-color: var(--brand);
+     color: white;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     border-radius: 8px;
+ }
+
+ .article-container {
+     gap: var(--space-medium);
+ }
+
+ article {
+     background-color: #cdb5df;
+     border-radius: 8px;
+     display:flex;
+     flex-direction:column;
+     align-items:flex-start;
+     gap:8px;
+ }
+
+ article .icon {
+     width: 24px;
+ }
+
+ article .button{
+    margin-top:var(--space-medium);
+ }
+
+ /* Contact Section */
+ .contact{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+ }
+
+ .contact form{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    min-width:50%;
+ }
