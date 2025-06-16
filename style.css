@@ -262,6 +262,7 @@ just a BIT less ugly! */
 
  /* Responsive media queries - 
  these allow us to add different styles at different sizes */
+ /* Show above mobile - tablet and bigger */
 @media only screen and (min-width: 768px) {
     header nav ul{
         flex-direction:row;
@@ -277,6 +278,8 @@ just a BIT less ugly! */
         gap:var(--space-medium);
     }
 }
+
+/* Show above tablet (e.g. laptop and bigger) */
 @media only screen and (min-width: 1024px) {
     .hero{
         padding:var(--space-xl);
